@@ -7,9 +7,13 @@ export default function OnboardingScreen({ navigation }) {
       <Text style={styles.title}>Hotel Booking App</Text>
       <Text style={styles.subtitle}>Find your perfect stay</Text>
       
-      <View style={styles.imagePlaceholder}>
-        <Text>Hotel Image</Text>
-      </View>
+      <Image
+        // Replace 'onboarding.png' below with the actual filename in:
+        // hotelApp/assets/01-OnboardingPage
+        source={require('../assets/01-OnboardingPage/Onboarding1.png')}
+        style={styles.image}
+        resizeMode="cover"
+      />
       
       <TouchableOpacity 
         style={styles.button}
@@ -46,14 +50,12 @@ const styles = StyleSheet.create({
     color: '#666',
     marginBottom: 40,
   },
-  imagePlaceholder: {
+  image: {
     width: 300,
     height: 200,
-    backgroundColor: '#e0e0e0',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 40,
     borderRadius: 10,
+    marginBottom: 40,
+    backgroundColor: '#e0e0e0',
   },
   button: {
     backgroundColor: '#007AFF',
